@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/9c02f0a892.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+<style>
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(0, 0, 3, 0.615);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 3, 0.615);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: darkorange;
+    }
+
+</style>
+<!-- 
+<body style="background-color: rgba(0, 0, 0, 0.74);" > -->
+<body style="background: rgba(250, 249, 249, 0.801);">
+    <nav  class="navbar navbar-expand-lg navbar-dark sticky-top" >
+        <a class="navbar-brand" href="/"><img src="{{url_for('static',filename='images/impulse.jpeg') }}" style="width:45px; height:45px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active line ">
+                    <a class="nav-link navbar-elements home"  href="/"><span class="fa fa-home"></span> Home</a>
+                </li>
+                    <li class="nav-item line ">
+                            <a class="nav-link navbar-elements-pos navbar-elements" data-toggle="modal" data-target="#exampleModal" href="/signup/"><span class="fa fa-sign-in"></span> Sign-In</a>
+                    </li>
+
+                    <li class="nav-item line ">
+                        <a class="nav-link navbar-elements-pos navbar-elements" href="/donor-dashboard/"><span class="fa fa-gg"></span>Dashboard</a>
+                    </li>
+
+
+                    <li class="nav-item line">
+                        <a class="nav-link navbar-elements-pos navbar-elements" href="/donor/form"><span class="badge badge-dark">
+                            <span class="fa fa-address-card" ></span> Donor-Form</span></a>
+                    </li>
+
+                    <li class="nav-item line">
+                        <a class="nav-link navbar-elements-pos navbar-elements" href="/patient/form"><span class="badge badge-dark ">
+                            <span class="fa fa-address-card"></span> Patient-Form</span></a>
+                    </li>
+                   
+                    <li class="nav-item line">
+                        <a class="nav-link navbar-elements navbar-elements-pos-profile" href="/user/donor-profile" ><span class="fa fa-user" aria-hidden="true">
+
+                        </span>Profile</a>
+                    </li>
+                        <a class="nav-link navbar-elements line" href="#" tabindex="-1" ><span class="fa fa-sign-out"></span>Logout</a>
+                    </li>
+                    
+
+            </ul>
+        </div>
+
+        
+
+    </nav> 
+
+ 
+    
+    {% block content %}     {% endblock %}
+    <div class="footer">
+       
+       <div style="text-align:center;"> <span class="fa fa-facebook "></span><span class="fa fa-instagram"></span></div>
+       
+
+       <div class="company">Hope Donor</div>
+
+
+   </div>
+   
+</body>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+
+            <form >
+
+                <div class="form-group" style="margin-bottom:30px;">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control " id="username" placeholder="Username">
+                  </div>
+        
+               
+                <div class="form-group" style="margin-bottom:30px;">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+
+                <div class="form-group" style="margin-bottom:30px;">
+                    <div class=" " style="font-weight:bold;">Forgot Password?</div>
+            
+                  </div>
+                
+              
+                <div class="form-group form-check " style="margin-bottom:30px;">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label class="form-check-label" for="check">Check me out</label>
+                  </div>
+        
+                <button type="submit" style="margin-bottom:30px; background:darkorange; " class="btn  btn-lg btn-block">Login</button>
+              </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <div class="modal-footer-text">Login here</div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</html>

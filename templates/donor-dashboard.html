@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{%block content%}
+
+
+<head>
+
+    <title>Dashboard- Donor</title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/donor-dashboard.css') }}">
+
+</head>
+
+<body>
+    <div class="container">
+    <div class="row row-content">
+        <div class="col-12">
+            <h2 class="main-heading" style="text-align:center;">DASHBOARD</h2>
+         </div>
+      </div>
+
+
+    <!-- <div class="row">
+        <div class="offset-4 col-4 offset-md-3 col-md-6 offset-lg-4 col-lg-4">
+            <div class=" donor-profile-button "><button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="Click here to check out your Profile" >Profile <span class="fa fa-user"></span> </button></div>
+        </div>
+    </div> -->
+    
+
+    <div class="donor-reports">
+
+        <div class="row">
+            <div class="col-4 col-lg-2">
+                <input type=date id="last-donation"  value="2020-07-22">
+            </div>
+
+            <div class="col-8 col-lg-10">
+                <div class="report-text">When was the last time you donoted Plasma via Hopedonor? </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-md confirm-btn">Confirm</button>
+    </div>
+
+
+<div class="request-back">
+
+  
+
+    <div class="row row-content">
+
+        <div class="col-4 col-lg-2">
+            <img class="profile-pic" src="{{ url_for('static',filename='images/Default.jpg') }} ">
+
+        </div>
+
+        <div class="col-8 col-lg-9 ">
+            <div class="patient-request"><span><b>Rik Bhatacharya</b></span> has sent you a request to be his donor! He really needs your plasma as soon as possible.
+                Accept his request so that he can contact you! (You may check his profile if you want) <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" 
+                    title="Click here to check out your Profile">Accept <span class="fa fa-check"></span> </button> <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" 
+                    title="Click here to check out your Profile">Reject <span class="fa fa-times"></span> </button></div>
+        </div>
+
+        
+    </div>
+
+        <div class="row visit">
+            <div class="col-4 col-lg-3">
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" 
+                    title="Click here to check out your Profile" >Rik <span class="fa fa-user"></span> </button>
+            </div>
+        </div>
+
+
+        </div>
+
+      
+
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+<script> $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })</script>
+
+
+
+</body>
+{% endblock %}

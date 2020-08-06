@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{%block content%}
+
+
+<head>
+    <title>patient-dashboard</title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/patient-dashboard.css') }}">
+
+</head>
+
+
+<body>
+
+    
+ 
+        <div class="NO-COVID">
+            <div class="row">
+                <div class="col-12 offset-lg-3">
+                    <div class="no-covid"> I Don't have Covid-19 anymore! <button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="right" 
+                        title="Click here to check out your Profile">Recovered <span class="fa fa-question-circle"></span> </button>  </div>
+                </div>
+                <div class = "col-12 offset-lg-3">
+                    <div class="no-covid-caption"> Please remember to let us know when you have recovered from Covid-19 <span class="fa fa-smile-o"></span></div>
+                </div>
+            </div>
+
+            </div>
+
+
+
+
+  <div class="container">
+
+
+        <div class="row row-content">
+            <div class="col-12">
+                <h2 class="main-heading" style="text-align:center;">Find your Match</h2>
+             </div>
+          </div> 
+
+        
+     <div class="filter-body">
+         <div class="row">
+             <div class="col-6 ">
+                 <div class="filter-label">Max Distance
+                 <select name="filter-distance" value="500m">
+                        <option>1 km</option>
+                        <option>2 km</option>
+                 </select></div> 
+             </div>
+
+             <div class="offset-lg-3 col-lg-3 col-6 ">
+                <div class="filter-label">Blood Group
+                <select name="filter-age" value="O+">
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+
+                </select></div> 
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn- btn-md btn-block filter-sumbit">Search</button>
+                </div>
+            </div>
+           
+         
+     </div>
+
+     <!-- card  -->
+
+     <div class="match-card">
+         <div class="row">
+             <div class="col-3 col-lg-2 ">
+                <img class="profile-pic" src="{{ url_for('static',filename='images/Default.jpg') }} ">
+                <button type="button" class="btn btn-primary profile-btn" data-toggle="tooltip" data-placement="right" 
+                title="Click here to check out your Profile" >Ayush Verma </button>
+                
+             </div>
+           
+
+             <div class=" col-7 ">
+                 
+                 <div class="row">
+                     <div class="col-6 qs">Name: <span class="answer">Ayush Verma </span>  </div>
+                     <div class="col-6 qs" >Tested Positive:<span class="answer">22/12/20</span>  </div>
+                 </div>
+
+        
+                 <div class="row">
+                    <div class="col-6 qs">Distance: <span class="answer"> 5 km</span>  </div>
+                    <div class="col-6 qs">Blood group:<span class="answer">O+ </span>  </div>
+                </div>
+             
+                <div class="row">
+                    <div class="col-6 qs">Age: <span class="answer">19 </span>  </div>
+                    <div class="col-6 qs">Chronic Kidney prob: <span class="answer">No </span>  </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 qs">Chronic Lung disease <span class="answer">No</span>  </div>
+                    <div class="col-6 qs">Cancer: <span class="answer">No </span>  </div>
+                </div>
+                <div class="row">
+                    <div class="col-5 pull-lg-1 connected-qs qs">Mobile:<span class="answer"> 9650844842</span>  </div> 
+                    <div class="offset-lg-1 col-6 connected-qs qs">Email:<span class="answer">ayush.verma@gmail.com</span>  </div>
+                </div> 
+
+             </div>
+
+             <div class="col-2">
+                 <div class="card-map"><img class="map" src="{{ url_for('static',filename='images/map.jpg') }} "></div>
+             </div>
+
+         </div>
+     </div>
+
+
+     </div> 
+</body>
+
+{% endblock %}

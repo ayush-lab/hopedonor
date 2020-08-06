@@ -1,0 +1,85 @@
+body{
+    font-family: 'Mulish', sans-serif !important;
+    background: rgba(131, 123, 123, 0.144) !important;
+}
+
+
+
+.row-content{
+
+margin-top:40px;
+
+}
+
+.main-heading{
+    color:black;
+}
+
+
+.donor-profile-button{
+    margin-top:10px;
+    text-align:center;
+    /* margin-left:100px; */
+}
+.profile-pic{
+    width:180px;    
+    padding-left:2px;
+
+}
+.congs{
+    
+    height: 30px !important;
+    text-align: center !important;
+    padding-top:10px !important;
+    font-size:15px;
+    
+}
+
+.patient-request{
+    font-size:20px;
+    padding-left:20px;
+}
+
+.btn-primary, .btn-danger{
+    margin-left:10px;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 6px rgba(0, 0, 0, 0.452);   
+}
+
+.request-back{
+    margin-top:20px;
+    padding-top:10px;
+    padding-left:40px;
+    padding-bottom:20px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 6px rgba(0, 0, 0, 0.452);
+    border: solid 4px rgba(255, 0, 0, 0.767);
+    border-radius:20px;
+    background:white;
+}
+
+.donor-reports{
+    margin-top:20px;
+    margin-bottom:30px;
+    padding:20px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.171), 3px 3px 6px rgba(0, 0, 0, 0.452);
+    background:white;
+    border-radius:20px;
+}
+
+
+.visit{
+    margin-top:3px;
+    margin-left:28px;
+    
+}
+.confirm-btn{
+margin-top:20px;
+}
+
+
+.report-text{
+    font-weight: bold;
+    font-size:20px;
+    margin-left:20px;
+    color:rgb(11, 11, 58);
+}

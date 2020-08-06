@@ -1,0 +1,562 @@
+{% extends "base.html" %}
+{%block content%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor-Registration</title>
+   
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/form.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/validation.css') }}">
+    
+</head>
+
+<body>
+      <div class="container mt-5">
+      <div class=row>
+        <div class="col-12">  
+         
+          <h2 class="Heading" style="font-weight:bold;" >Donor Registration</h2>
+   
+          </div>
+
+          <div class="col-12 ">
+              <p style="text-align: center;">  Please patiently and carefull fill the form as we require them to connect you with patients</p>
+          </div>
+      </div>
+
+    
+
+
+
+    <!-- form starts here -->
+
+    
+        <form  action="/donor/form/" method="POST" id="main" validate>
+          
+
+
+          
+            <div class="form-row" >
+
+              <!-- username -->
+
+                <div class="form-group col-12 text-center">
+
+                    <div class="form-group " id="q51">
+                        <label class="form-label-first" for="username">Create a Username</label>
+                        <p class="sub-label" >*Please note down this username somewhere safe. As this will be your credential</p>
+                        <input required min="5" type="text" name="Username" class="form-control offset-lg-3" id="username"  placeholder="Enter your Username">
+                        <div class=" offset-lg-3 offset-0 col-12 col-lg-6 Username-msg-form messages "></div>
+                    </div>
+    
+
+                 <a href="#q52"><button type="button" class="btn  btn-next" value=0>NEXT</button></a>
+                
+                <!-- password  -->
+
+                <fieldset disabled>
+                 <div class="form-group col-12 text-center">
+
+                  <div class="form-group " id="q52">
+                      <label class="form-label-first" for="password">Create a Password</label>
+                      <p class="sub-label" >*Please note down this Password somewhere safe. As this will be your credential.</p>
+                      <input required min="6" type="password" name="Password" class="form-control offset-lg-3" id="password" placeholder="Enter your Password">
+                      <div class=" offset-lg-3 offset-0 col-12 col-lg-6 password-msg-form messages "></div>
+                    </div>
+  
+               <a href="#q53"><button type="button" class="btn  btn-next" value=1>NEXT</button></a>
+              </fieldset>
+
+
+              <!-- confirm password -->
+
+            <fieldset disabled>
+
+               <div class="form-group col-12 text-center">
+
+                <div class="form-group " id="q53">
+                    <label class="form-label-first" for="confrm-password">Confirm Your Password</label>
+                    <input required type="password" name="Confirm-Password" class="form-control offset-lg-3" id="confirm-password"  placeholder="Confirm your password">
+                    <div class=" offset-lg-3 offset-0 col-12 col-lg-6 confirm-msg-form messages "></div>
+                </div>
+
+             <a href="#q54"><button type="button" class="btn  btn-next" value=2>NEXT</button></a>
+            
+              </fieldset>
+
+
+                    <fieldset disabled id="q54"> 
+                
+                <div class="form-check ">
+                
+                  <label class="form-label spl" for="report"> When did you get your discharge report?</label>
+                    
+                    <input required type=date name="Report"  value="2020-07-22" class="form-control offset-lg-3" id="report">
+                    
+              
+                  </div>
+              
+           
+                <a href="#q2"><button type="button" id="q2" class="btn  btn-next" value=3 >NEXT</button></a>
+
+                </fieldset>
+
+                  <!-- NAME AREA -->
+              <fieldset disabled>
+                    <div class="form-group " id="q2" >
+                        <label class="form-label spl" for="name" >Name of the donor?</label>
+                        <input required type="text" name="Name"  class="form-control offset-lg-3 " id="name"  placeholder="Enter your Name"   >
+                    </div>
+
+                      
+                      <a href="#q3"><button type="button" class="btn  btn-next" value=4 >NEXT</button></a>
+                            
+               </fieldset>
+                 
+                  <!-- age area -->
+                  
+              <fieldset disabled>
+                <div class="form-group " id="q3">
+                    <label class="form-label spl" for="age"> Your Age?</label>
+                    
+                    <input required max="200" min="18" type="number" name="Age"  class="form-control offset-lg-3" id="age" placeholder="Enter your Age">
+                    <div class=" offset-lg-3 offset-0 col-12 col-lg-6 age-msg-form messages "></div>
+              
+                  </div>
+             
+                  <a href="#q4"><button type="button" class="btn  btn-next" value=5 >NEXT</button></a>
+
+                </fieldset>  
+
+
+                <fieldset disabled>
+                  <div class="form-group col-12 text-center"  id="q4">
+                    <label class="form-label">Your Gender?</label>
+                
+                <div class="form-check ">
+                  <div class="form-check ">
+
+                    <div class="radio-toolbar">
+                      <input type="radio" id="men" name="Gender" value="male" >
+                      <label for="men">Male</label>
+                  
+                      <input type="radio" id="women" name="Gender" value="female">
+                      <label for="women">Female</label>
+                  
+                    
+                  </div>
+                
+                  </div>
+
+                </div>
+
+                <a href="#q5"><button type="button" class="btn  btn-next" value=6>NEXT</button></a>
+                
+              </fieldset>
+
+                  <!-- Blood Group -->
+                <fieldset disabled>
+                  <div class="form-group " id="q5">
+                    <label class="form-label spl" for="blood-group">Select your Blood-Group</label>
+                    <select name="Blood-Group" class="form-control offset-lg-3" id="blood-group"  placeholder="Choose your bood-group">
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
+                    </div>
+
+                  <a href="#q6"><button type="button" class="btn  btn-next" value=7 >NEXT</button></a>
+                </fieldset>
+
+               <!-- Location -->
+               <fieldset disabled> 
+                  <div class="form-group " id="q6">
+                      <label class="form-label spl" for="location">Your Current City?</label>
+                      <input required type="text" name="Location" class="form-control offset-lg-3" id="location"  placeholder="Enter your city">
+                    </div>
+  
+                  <a href="#q7"><button type="button" class="btn  btn-next" value=8>NEXT</button></a>
+              
+                </fieldset>
+
+
+
+                  <!--Mobile Number -->
+
+                 <fieldset disabled>
+                        <div class="form-group " id="q7">
+                          <label class="form-label " for="mobile"> Your Mobile Number?</label>
+                          <p class="sub-label" >*We won't share your mobile number without your consent</p>
+                          <input required type="number" name="Mobile" class="form-control offset-lg-3" id="mobile"  placeholder="Enter your Mobile number">
+                          <div class=" offset-lg-3 offset-0 col-12 col-lg-6 mobile-msg-form messages "></div>  
+                        </div>
+      
+                        <a href="#q8"><button type="button" class="btn  btn-next" value=9>NEXT</button></a>
+  
+                  </fieldset>
+                    <!--Email-->
+
+
+
+                <fieldset disabled>
+                    <div class="form-group " id="q8">
+                          <label class="form-label " for="email"> Your Email?</label>
+                             <p class="sub-label" >*We won't share your email without your consent</p>
+                          <input type="email" name="Email" class="form-control offset-lg-3" id="email" placeholder="Enter your Email">
+                             <div class=" offset-lg-3 offset-0 col-12 col-lg-6 email-msg-form messages "></div>  
+                    </div>
+                      
+                      <div class="row">
+                          <div class="col-3 col-pull-6 offset-md-3">
+                            <a href="#q9"> <button class="btn btn-next btn-infoo" value=10 type="button">Skip if you don't have an Email</button></a>
+                      </div>
+                    
+                    </div>
+
+                    <a href="#q9"><button type="button" class="btn  btn-next"  value=10>NEXT</button></a>
+                  </fieldset>
+
+
+                <!-- Weight -->
+
+
+                <fieldset disabled>
+                    <div class="form-group " id="q9">
+                      
+                      <label class="form-label spl" for="weight">Your Weight(in kg)?</label>
+                      <input  required min="50" type="number" name="Weight"  class="form-control offset-lg-3" id="weight" placeholder="Enter your Weight">
+                      <div class=" offset-lg-3 offset-0 col-12 col-lg-6 weight-msg-form messages "></div>
+
+                    </div>
+  
+                    <a href="#q10"><button type="button" class="btn  btn-next" value=11>NEXT</button></a>
+
+              </fieldset>
+
+
+              
+               <!--Discharge papers-->
+
+
+          
+
+                <!-- are you pregnant? -->
+
+
+                <fieldset disabled>
+
+                  <div class="form-group col-12 text-center"  id="q10">
+                    <label class="form-label"><b>For Women only</b>, Have you ever had Pregnancy?</label>
+                
+                    <div class="form-check ">
+                      <div class="form-check ">
+                        <div class="radio-toolbar">
+                          <input type="radio" id="p1" name="Pregnancy" value="yes" >
+                          <label for="p1">Yes</label>
+                      
+                          <input type="radio" id="p2" name="Pregnancy" value="no">
+                          <label for="p2">No</label>
+                      
+                        
+                      </div>
+                    
+                      </div>
+                   </div>
+                </div>
+                <a href="#q11"><button type="button" value=12 class="btn  btn-next" >NEXT</button></a>
+
+              </fieldset>
+
+
+                <!-- Cancer Patient  -->
+                <fieldset disabled>
+                <div class="form-group col-12 text-center"  id="q11">
+                  <label class="form-label">Do you have cancer or had it in the past? </label>
+              
+                <div class="form-check ">
+                  <div class="form-check ">
+                    <div class="radio-toolbar">
+                      <input type="radio" id="c1" name="Cancer" value="yes" >
+                      <label for="c1">Yes</label>
+                  
+                      <input type="radio" id="c2" name="Cancer" value="no">
+                      <label for="c2">No</label>
+                  
+                    
+                  </div>
+                
+                  </div>
+                  </div>
+                </div>
+                <a href="#q12"><button type="button" class="btn  btn-next" value=13 >NEXT</button></a>
+
+                </fieldset>
+
+
+
+                <!-- Liver patient -->
+             <fieldset disabled>
+                <div class="form-group col-12 text-center"  id="q12">
+                  <label class="form-label">Are you a Liver Patient?</label>
+              
+              <div class="form-check ">
+                <div class="form-check ">
+                  <div class="radio-toolbar">
+                    <input type="radio" id="l1" name="Liver" value="yes" >
+                    <label for="l1">Yes</label>
+                
+                    <input type="radio" id="l2" name="Liver" value="no">
+                    <label for="l2">No</label>
+                
+                  
+                </div>
+              
+                </div>
+                 </div>
+              </div>
+              <a href="#q13"><button type="button" class="btn  btn-next" value=14 >NEXT</button></a>
+
+            </fieldset>
+              
+
+            <fieldset disabled>
+              <div class="form-group col-12 text-center"  id="q13">
+                <label class="form-label">Do you have chronic Kidney disease?</label>
+            
+            <div class="form-check ">
+              <div class="form-check ">
+                <div class="radio-toolbar">
+                  <input type="radio" id="k1" name="Kidney" value="yes" >
+                  <label for="k1">Yes</label>
+              
+                  <input type="radio" id="k2" name="Kidney" value="no">
+                  <label for="k2">No</label>
+              
+                
+              </div>
+            
+              </div>
+               </div>
+            </div>
+            <a href="#q14"><button type="button" class="btn  btn-next" value=15 >NEXT</button></a>
+
+          </fieldset>
+
+
+
+          <fieldset disabled>
+            <div class="form-group col-12 text-center"  id="q14">
+              <label class="form-label">Do you have chronic heart disease?</label>
+          
+          <div class="form-check ">
+            <div class="form-check ">
+              <div class="radio-toolbar">
+                <input type="radio" id="h1" name="Heart" value="yes" >
+                <label for="h1">Yes</label>
+            
+                <input type="radio" id="h2" name="Heart" value="no" >
+                <label for="h2">No</label>
+            
+              
+            </div>
+          
+            </div>
+             </div>
+          </div>
+          <a href="#q15"><button type="button" class="btn  btn-next" value=16>NEXT</button></a>
+
+        </fieldset>
+
+
+
+        <fieldset disabled>
+          <div class="form-group col-12 text-center"  id="q15">
+            <label class="form-label">Do you have Diabetes?</label>
+        
+        <div class="form-check ">
+          <div class="form-check ">
+            <div class="radio-toolbar">
+              <input type="radio" id="d1" name="Diabetes" value="yes" >
+              <label for="d1">Yes</label>
+          
+              <input type="radio" id="d2" name="Diabetes" value="no" >
+              <label for="d2">No</label>
+          
+            
+          </div>
+        
+          </div>
+           </div>
+        </div>
+        <a href="#q16"><button type="button" class="btn  btn-next" value=17>NEXT</button></a>
+
+      </fieldset>
+
+      <fieldset disabled>
+        <div class="form-group col-12 text-center"  id="q16">
+          <label class="form-label">Do you have Lung Problems? </label>
+      
+        <div class="form-check ">
+          <div class="form-check ">
+            <div class="radio-toolbar">
+              <input type="radio" id="l11" name="Lung" value="yes">
+              <label for="l11">Yes</label>
+          
+              <input type="radio" id="l22" name="Lung" value="no">
+              <label for="l22">No</label>
+          
+            
+          </div>
+        
+          </div>
+          </div>
+        </div>
+        <a href="#q17"><button type="button" class="btn  btn-next" value=18 >NEXT</button></a>
+
+        </fieldset>
+
+            <!-- Cancer Patient  -->
+            <fieldset disabled>
+              <div class="form-group col-12 text-center"  id="q17">
+                <label class="form-label">Do you have problems with Blood Pressure? </label>
+            
+              <div class="form-check ">
+                <div class="form-check ">
+                  <div class="radio-toolbar">
+                    <input type="radio" id="b1" name="bp" value="yes" >
+                    <label for="b1">Yes</label>
+                
+                    <input type="radio" id="b2" name="bp" value="no">
+                    <label for="b2">No</label>
+                
+                  
+                </div>
+              
+                </div>
+                </div>
+              </div>
+              <a href="#q18"><button type="button" class="btn  btn-next" value=19 >NEXT</button></a>
+
+              </fieldset>
+
+              <fieldset disabled>
+                <div class="form-group col-12 text-center"  id="q18">
+                  <label class="form-label">Do you have more than 14 drinks per week? </label>
+              
+                <div class="form-check ">
+                  <div class="form-check ">
+                    <div class="radio-toolbar">
+                      <input type="radio" id="c11" name="Drink" value="yes" >
+                      <label for="c11">Yes</label>
+                  
+                      <input type="radio" id="c22" name="Drink" value="no">
+                      <label for="c22">No</label>
+                  
+                    
+                  </div>
+                
+                  </div>
+                  </div>
+                </div>
+                <a href="#q19"><button type="button" class="btn  btn-next" value=20 >NEXT</button></a>
+
+                </fieldset>
+
+                <!-- Other diseases  -->
+                <fieldset disabled>
+                  <div class="form-group col-12 text-center"  id="q19">
+                    <label class="form-label">Do you have Adhar Card? </label>
+                
+                  <div class="form-check ">
+                    <div class="form-check ">
+                      <div class="radio-toolbar">
+                        <input type="radio" id="a11" name="Cancer" value="yes" >
+                        <label for="a11">Yes</label>
+                    
+                        <input type="radio" id="a22" name="Cancer" value="no">
+                        <label for="a22">No</label>
+                    
+                      
+                    </div>
+                  
+                    </div>
+                    </div>
+                  </div>
+                  <a href="#q20"><button type="button" class="btn  btn-next" value=21 >NEXT</button></a>
+  
+                  </fieldset>
+  
+                <fieldset disabled>
+
+                <div class="form-group " id="q20">
+                  <label class="form-label " for="other-problems"> Other disease you have?</label>
+                  <p class="sub-label" >Anything you want to tell us about</p>
+                  <input type="text" name="Other-Problems" class="form-control offset-lg-3" id="other-problems" 
+                  placeholder="Cancer patient, lung problems .. (TO BE CHANGED LATER) ">
+                </div>
+                
+       
+      
+    
+        
+            <div class="row mt-5">
+           
+
+              <div class="col-12 " style="text-align: left;">
+               
+                <h3>By submiting the form, I confirm that </h2>
+              
+                <p class="ml-3 mt-3">1. I confirm that the information I have provided here is complete
+                   and accurate to the best of my knowledge.</p>
+                <p class="ml-3">2. I confirm that I fulfil the eligibility 
+                  criteria for patients set out at https://hopedoner.com.</p>
+                <p class="ml-3">3. I  confirm that I wish to share the information provided here
+                   with Dhoondh for the exclusive purpose(s) of 
+                  matching with donors from the database of donors.registered with Dhoondh and sharing this information directly and solely with the matched donors.</p>
+                <p class="ml-3">4. I agree to hold harmless Dhoondh 
+                  for its use of the information for the
+                   exclusive purpose(s) set out above.
+                </p>
+
+               </div>
+             </div>
+            
+            
+
+           <div class="row">
+             <div class="col-12 ">
+            <button type="submit" class="btn btn-block btn-lg btn-primary" >Confirm</button>
+           </div> 
+          </div>
+            
+        </fieldset> </div>
+
+      
+      </div>
+
+          </form>
+        </div>
+
+      
+      </div>
+    
+     </div>  
+     <!-- end of container -->
+
+        </div>
+              
+        
+
+      
+
+<script src="{{url_for('static',filename='js/form.js')}}"></script>
+
+</body>
+
+{% endblock %}

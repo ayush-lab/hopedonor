@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{%block content%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+   
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<div  id="top" class="container">
+            <!-- Search form -->
+            <form class=" form-inline d-flex justify-content-center md-form form-sm mt-0">
+                <span class="fa fa-search" aria-hidden="true" style="margin-top:35px;"></span>
+                <input class="form-control form-control-sm w-75 search-bar " type="text" placeholder="Enter your location to see the number of Donors"
+                aria-label="Search">
+            </form>
+
+            <div class="row row-content">
+                <div class="col-12">
+                    <h2 class="main-heading" style="text-align:center;">Find&nbspYour&nbspHope&nbspDonor&nbsp</h2>
+                </div>
+            </div>
+
+            <div class="row row-dist">
+                <div class="offset-1 col-10  offset-sm-0 col-sm-4">
+                    <a role="button" class="btn btn-color-1 account-btn" href="user/donor-profile" ><span class="fa fa-heart donor-heart"></span>&nbsp&nbsp&nbsp&nbsp<b>Donor Account</b></a>
+
+                </div>
+
+                <div class=" offset-1 col-10 offset-sm-0 col-sm-4">
+                    <a role="button" class="btn btn-color-2 account-btn" href="user/patient-profile"><span class="fa fa-heart patient-heart"></span>&nbsp&nbsp&nbsp&nbsp<b>Patient Account</b></a>  
+                </div>
+
+                <div class=" offset-1  col-10  offset-sm-0 col-sm-4">
+                    <a role="button" class="btn btn-color-3 account-btn" href="user/patient-profile"> &nbsp <span class="fa fa-heart hospital-heart"></span>&nbsp&nbsp&nbsp&nbsp<b>Hospital Account</b><a>
+                </div>
+            </div>
+
+
+        <div class="row" >
+            <div class="col-12">
+                <div class="arrow bounce"><a href="#working-" class="ar fa fa-arrow-down fa-3x"></a>
+                
+                </div>
+                <div id="working-"></div>
+            </div>
+        </div>
+
+
+        <div id="working" class="row">
+            <div class="col-12">
+            
+                <h2 >How Does it Work?</h2>
+            
+            </div>
+        </div>
+
+        <div class="upward-arrow">
+            <a href="#top"><span class="fa fa-long-arrow-up"></span></a>
+        </div>
+     
+        <div class="row">
+            <div class=" offset-0 col-md-10 offset-md-2 offset-lg-0 col-lg-4">
+                <div class="card card1-size" >
+                    <img id="card1-img" class="card-img-top"src="{{url_for('static',filename='images/form.png') }}" alt="Account">
+                    <div class="card-body">
+                      <h5 class="card-title" >Make your Account based on your need <p><p><span class="badge badge-success">Donor</span> <span class="badge badge-primary">Patient</span></p></p></h5>
+                      <p class="card-text" >Register your details. Please patiently fill the necessary informations as we need them to find your match.Please patiently fill
+                           the necessary inf</p>
+                    </div>
+                   
+                  </div>
+        
+            </div>
+
+            <div class=" offset-0 col-md-10 offset-md-2 offset-lg-0 col-lg-4">   
+                 <div class="card card2-size" >
+                <img id="card2-img" class="card-img-top"  src="{{url_for('static',filename='images/dashboard.png') }}" alt="connections">
+                <div class="card-body">
+                  <h5 class="card-title" >Connecting you to a network of Donor<p><p><span class="badge badge-info " >Social Network </span> </p></p></h5>
+                  <p class="card-text">You become a part of a social media which allows you to find the most suitable donor based on our well-crafted algorithm. </p>
+                </div>
+              
+               
+              </div>
+            </div>
+
+            <div class="offset-0 col-md-10 offset-md-2 offset-lg-0 col-lg-4">
+                <div class="card card3-size" >
+                    <img id="card3-img" class="card-img-top"   src="{{url_for('static',filename='images/donor-profile.png') }}" alt="connecting">
+                    <div class="card-body">
+                      <h5 class="card-title" >Connect with your hope donor easily!<p><p></p><span class="badge badge-danger"> Filters </span> <span class="badge badge-info">Location</span> <span class="badge badge-info">Blood-group</span> <span class="badge badge-info">Age</span></p></h5><p></p>
+                      <p class="card-text">You can directly contact the person to initiate your treatment.
+                       You can filter yourself based on location, blood-group, age.</p>
+                    </div>
+                  
+                   
+                  </div>
+        
+            </div>
+        </div>  
+    
+
+        
+        <!-- end of cards -->
+
+        <div id="working" class="row">
+            <div class="col-12">
+          
+                <h2>Our Main Features</h2>
+     
+            </div>
+        </div>
+
+        <div class="container-fluid" >
+        <div class="row mt-5 " >
+            
+            <div class="col-12">
+                <h3 class="feature-title">Live Map </h3>
+                <p class="features" >You can spot the plasma donors live on the map around you or any other place in India.</p>
+
+                <p class="features">You can check the number of willing donors around your place</p>
+            </div>
+            </div>
+        
+ 
+            <div class="row mt-5 "  >
+                
+                <div class="col-12">
+                    <h3 class="feature-title">Social Media Platform</h3>
+                    <p class="features"> Connecting you and your matching donors in a social media style.</p>
+                <p class="features">Allows you to see the abridged profile of donor but to see the full version, you have to send a donor request.</p>
+                <p class="features">Allows you to find your own donor without the help of hospital</p>
+               </div>
+            </div>
+
+            
+            <div class="row mt-5 ">
+                <div  class="col-12">
+                <h3 class="feature-title">Filters</h3>
+                   
+                  
+                     <div class="features">   
+                       
+                        <h4  class="badge badge-danger"> Range Location filters</h4>
+                        <p>Helps you filter out donors based on locations. We calculate your position with that of the donor's and connects you with the nearest donor.. </p>
+                    </div>
+                    <div class="features">    
+                        <h4 class="badge badge-danger">Age Groups</h4>
+                        <p>Filters based on age groups. Age group is defind as such (to be filled later) </p>
+                    </div> 
+                      <div class="features">
+                        <h4 class="badge badge-danger">Blood group</h4>
+                        <p>Filters based on blood groups. As it is highly recommended to have appropriate blood groups to minimize the risk.</p>
+                   </div>
+                    </div>
+                    </div>
+          </div> 
+          <!-- end of main features -->
+        </div>
+
+        <div >
+            <h3 class="banner">Donate your Plasma Today to Save a Life!</h3>
+        </div> 
+        
+   
+    </div>
+          
+    
+    
+
+
+
+<script src="{{url_for('static',filename='js/heading.js')}}"></script>
+
+
+{% endblock %}

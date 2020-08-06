@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{%block content%}
+
+
+<head>
+    <title>Patient-Profile </title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/patient-profile.css') }}">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="header-profile">
+
+        <div class="profile">
+            <img class="profile-pic" src="{{ url_for('static',filename='images/Default.jpg') }} ">
+        </div>
+
+       
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="user-name">Ayush Verma</h3>
+                </div>
+
+ 
+            </div>
+
+
+             <div class="row">
+              
+                 <div class="col-5 col-lg-3">
+                    <div class=" contactme "><button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Once your donor accepts your request, you will be able to see his personal information such as mobile number" >Convert to Donor <span class="fa fa-plus"></span> </button></div>
+                 </div>
+                 <div class=" col-4 col-lg-2">
+                    <div class=" report-donor "><button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="This is to report the donor if he is asking for money. ">Recovered <span class="fa fa-question-circle"></span> </button></div>
+                 </div>
+             </div>
+                
+
+        
+            </div> 
+
+            <div class="row">
+                <div class="offset-lg-9 col-lg-3 offset-8 col-4">
+                    <div class="donor"><span class="badge badge-danger">PATIENT<span class="fa fa-check-circle"></span></span></div>
+                </div>
+              
+            </div>
+            <!-- end of header -->
+
+
+
+        <div class="bio-heading">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-bio">About Ayush</div>
+                </div>
+            </div>
+        </div>
+
+    
+
+    <div class="bio">
+        
+        <div class="row">
+           
+                <div class="col-12 Donor-home">
+                    <span class="fa fa-map-marker donor-home"><span class="house"> Lives in:</span> <span class="house-answer">Noida, Uttar Pradesh, India</span> </span>
+         
+            </div>
+        </div>
+
+        
+
+        <div class="row">
+            
+                <div class="col-12 Donor-mobile">
+                    <span style="color:rgba(29, 11, 4, 0.76)" class="fa fa-mobile donor-mobile"><span class="mobile-phone">  Contact :</span> <span class="mobile-answer">9650844842</span> </span>
+                </div>
+  
+        </div>
+
+
+
+
+        <div class="row">
+           
+                <div class="col-12 Donor-age">
+                    <span class="fa fa-user donor-age"><span class="age"> Age:</span> <span class="age-answer">18</span> </span>
+                </div>
+    
+        </div>
+
+       
+        
+        <div class="row">
+        
+                <div class="col-12 Donor-blood">
+                    <span style="color:rgba(214, 16, 16, 0.76)" class="fa fa-tint donor-blood"><span class="blood-group"> Blood Group:</span> <span class="blood-answer">O+</span> </span>
+                </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 Donor-weight">
+                <span class="fa fa-th donor-weight "><span class="weight"> Weight:</span> <span class="weight-answer">50 kg</span> </span>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+    <div class="status">
+        <div class="row">
+            <div class="col-12">
+                <div >Status : Connected with Akash</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bio">
+        <div class="donor-patient">Ayush Verma <span class="fa fa-heartbeat "></span> Akash Gupta</div>
+ 
+            
+       
+        <div class="connection"> on the26th of July.</div>
+           
+        </div>
+        
+   
+    <div class="status" style="color:#ce1711; background:rgba(252, 22, 6, 0.267);">
+        <div class="row">
+            <div class="col-12">
+                <div >Status : Not Connected yet</div>
+            </div>
+        </div>
+
+
+   
+
+        </div>
+
+    </div>
+
+</body>
+
+<script> $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })</script>
+{% endblock %}

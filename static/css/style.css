@@ -1,0 +1,99 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.home{
+    margin-left:100px;
+}
+
+.navbar{
+    background:#535c68;
+  
+}
+
+.nav-link{
+    font-size: 15px !important;
+}
+
+.navbar-elements-pos{
+    margin-left:1px;
+
+
+}
+.fa-address-card{
+    text-align:center;
+}
+
+
+.navbar-elements{
+    font-size: 17px;
+    font-weight: bold;
+
+}
+.badge-dark{
+width:110px;
+height:30px;
+padding:10px !important;
+color: black !important;
+font-size:13px !important; 
+background: #6ab04c  !important;
+}
+
+.navbar-elements-pos-profile{
+    margin-left:500px;
+}
+.collapse{
+    transition: all ease 0.1s;
+}
+
+@media (max-width :992px){   
+
+   .home{margin-left:0px;}
+
+   .navbar-elements-pos-profile{
+    margin-left:0px; }
+
+    .navbar-elements-pos{
+        margin:0px;
+
+    }
+    .line{
+        border-top:2px solid grey;
+        margin-top:10px;
+    }
+
+
+}
+
+
+.footer{
+    opacity:0.7;
+    height:10px;
+    margin-top: 100px;
+    text-align:center;
+  
+}
+ .fa-facebook,.fa-instagram{
+    font-size:30px;
+    margin-top:10px;
+    margin-left: 8px;
+    /* box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.322), 3px 3px 10px black; */
+    border-radius: 20px;
+    padding:5px;
+    background-color:rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.company{
+text-align:center;
+margin-top:20px;
+font-size:17px;
+color:rgb(109, 104, 104);
+margin-left:5px;
+}

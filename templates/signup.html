@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{%block content%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+   
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+
+</head>
+<body>
+
+   <div class="container-fluid">
+
+    <img src="{{ url_for('static',filename='images/blank.jpg') }}" alt="pic "  style="width:100%;  position:static;" >
+
+<div class="container-border-form">
+    <h3 style="text-align:center; margin-bottom:30px;">Donor Registration</h3>
+    <form >
+
+        <div class="form-group" style="margin-bottom:30px;">
+            <label for="username">Username</label>
+            <input type="text" class="form-control " id="username" placeholder="Username">
+          </div>
+
+        <div class="form-group" style="margin-bottom:30px;">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control  "  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp"  class="form-text text-muted" style="color:rgb(73, 70, 70);" >We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group" style="margin-bottom:30px;">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Password">
+        </div>
+      
+        <div class="form-group" style="margin-bottom:30px;">
+          <label for="confirmpassword">Confirm Password</label>
+          <input type="password" class="form-control " id="confirmpassword" placeholder="Password">
+        </div>
+      
+
+        <button type="submit" style="margin-bottom:10px;" class="btn btn-success btn-lg btn-block">Signup</button>
+      </form>
+    </div>
+
+   </div> 
+    
+{% endblock %}

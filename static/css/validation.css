@@ -1,0 +1,40 @@
+.empty-input{
+    border: solid 2px #eb4d4b !important;
+    box-shadow: 2px 2px  1px #eb4d4b!important; 
+    
+}
+
+.success-input{
+    border: solid 4px #badc58 !important;
+    box-shadow: 2px 2px  1px #badc58!important; 
+   
+}
+
+
+.messages{
+    margin-top:5px;
+    color:white;
+    font-size:16px;
+    text-align:left !important;
+}
+
+ input:focus:valid{
+
+    
+-moz-box-shadow:none;
+background:white;
+
+
+
+}
+
+
+input:focus:invalid{
+
+    
+    -moz-box-shadow:none;
+    background:rgb(209, 61, 61);
+    
+    
+    }
+    

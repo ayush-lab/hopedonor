@@ -1,0 +1,25 @@
+.container-border{
+
+    margin-top:200px;
+    border: solid 1px black;
+    padding: 20px;
+    z-index:100;
+}
+.container-border-form{
+background: #ffffff;
+width: 30%;
+position: absolute;
+border:solid 2px transparent;
+border-radius: 25px;
+box-shadow: 1px 1px 10px ;
+padding:20px;
+top:100px;
+left:45%;
+font-size:19px;
+font-weight:bold;
+
+
+}
+.container-fluid{
+    position:relative;
+}
